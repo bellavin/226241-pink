@@ -11,7 +11,7 @@ module.exports = function(grunt) {
           cwd: "source",
           src: [
             "fonts/**/*.{woff,woff2}",
-            "img/**",
+            "img/!(icon-*.svg|logo-pink-white-*.svg)",
             "js/**"
           ],
           dest: "build"
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
           includeTitleElement: false
         },
         files: {
-          "build/img/sprite.svg": ["source/img/icon-*.svg"]
+          "build/img/sprite.svg": ["source/img/icon-*.svg", "source/img/logo-pink-white-*.svg"]
         }
       }
     },
